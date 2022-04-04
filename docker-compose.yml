@@ -1,0 +1,9 @@
+version: '1'
+services:
+  web:
+    build: .
+    volumes:
+      - .:/home/playground/frontend
+    ports:
+      - 3000:3000
+    tty: true
