@@ -1,8 +1,15 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  server: {
+    port: 8000,
+  },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
+
+  env: {
+    API_BASE: process.env.API_BASE,
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -37,6 +44,8 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+
+    '@nuxtjs/dotenv',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
